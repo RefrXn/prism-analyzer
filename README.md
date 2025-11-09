@@ -58,3 +58,53 @@ Audio In (WM8731 / I²S)
  Spectrum Mapping → WS2812 Timing
         ↓
  LED Matrix Visualization
+```
+
+---
+
+## Notes / Disclaimer
+
+- The **`spectrum_to_led`** module is **not provided** in this repository because WS2812B matrix wiring orders differ across setups.  
+  Please implement your own mapping logic. For a two-dimensional matrix in **Verilog-2001**, consider flattening it into a 1-D bus (row- or column-major) and using `generate` blocks or index arithmetic to map `(row, col)` → `flat_index`.
+
+- **Please do not upload this project to CSDN or any other content-reposting sites.**
+
+- The **WM8731 codec driver** section is **based on Alinx teaching examples**.  
+  Portions of the **WS2812 driver** code originate from unknown open-source sources.  
+  If any copyright infringement is involved, please contact me for removal.
+
+- **Hardware used:**  
+  - **FPGA Board:** Alinx ATRIX7035  
+  - **Codec Module:** Alinx AN831 (WM8731)  
+  - **Microphone:** Primo EM272Z1
+
+## License
+
+**CERN Open Hardware Licence Version 2 - Weakly Reciprocal (CERN-OHL-W-2.0)**  
+
+Copyright © 2025 Refracción  
+
+This source describes Open Hardware and is licensed under the CERN-OHL-W v2.  
+
+You may redistribute and modify this documentation and design files under the terms of the CERN-OHL-W v2.  
+A copy of the license is included in this repository in the file `LICENSE`, and may also be obtained at:  
+https://ohwr.org/cern_ohl_w_v2.txt  
+
+You are granted the right to:  
+- Use, copy, modify, and distribute this design and documentation;  
+- Manufacture products using the licensed material;  
+- Convey modified or derivative works under the same license terms.  
+
+You must:  
+- Retain the copyright notice, license reference, and disclaimers in all copies;  
+- Provide access to the modified source when you distribute or sell products based on it;  
+- Clearly indicate the modifications you made and the date of modification.  
+
+This license comes **without any warranty**, to the extent permitted by applicable law.  
+See the full text of the license for detailed terms and conditions.
+
+---
+
+**SPDX-License-Identifier:** CERN-OHL-W-2.0
+
+
