@@ -7,7 +7,7 @@ FPGA implementation of a **32×8 WS2812B LED matrix spectrum visualizer**, writt
 
 ---
 
-## 📘 Overview
+## Overview
 PrismAnalyzer captures audio from the WM8731 codec via I²S, performs real-time FFT on the audio stream, and maps the frequency bands to a WS2812 LED matrix.  
 The system is designed for real-time operation on FPGA hardware and is divided into three primary functional blocks:
 
@@ -17,7 +17,7 @@ The system is designed for real-time operation on FPGA hardware and is divided i
 
 ---
 
-## ⚙️ Module Hierarchy
+## Module Hierarchy
 ```text
 top.v
 ├── top_codec.v
@@ -43,7 +43,7 @@ top.v
 
 ---
 
-## 🔄 Data Flow
+## Data Flow
 ```text
 Audio In (WM8731 / I²S)
         ↓
