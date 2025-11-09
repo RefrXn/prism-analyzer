@@ -16,22 +16,23 @@ The system is designed for real-time operation on FPGA hardware and is divided i
 ## ⚙️ Module Hierarchy
 ```text
 top.v
-├── u_codec : top_codec
-│   ├── u_i2s : i2s
-│   │   ├── u_timing_gen : timing_gen
-│   │   └── u_rx : rx
-│   └── u_i2c : i2c
-│       ├── u_i2c_reg_cfg : i2c_reg_cfg
-│       └── u_i2c_dri : i2c_dri
+├── top_codec.v
+│   ├── i2s.v
+│   │   ├── timing_gen.v
+│   │   └── rx.v
+│   └── i2c.v
+│       ├── i2c_reg_cfg.v
+│       └── i2c_dri.v
 │
-├── u_fft : top_fft
-│   ├── u_frame_packer : frame_packer
-│   ├── u_fft_wrapper : fft_wrapper
-│   │   └── u_xfft : xfft_0 (Xilinx FFT IP)
-│   ├── u_complex_to_mag : complex_to_mag
-│   ├── u_band_accum : band_accum
-│   └── u_band_buffer : band_buffer
+├── top_fft.v
+│   ├── frame_packer.v
+│   ├── fft_wrapper.v
+│   │   └── xfft_0.xci   (Xilinx FFT IP)
+│   ├── complex_to_mag.v
+│   ├── band_accum.v
+│   └── band_buffer.v
 │
-└── u_led : top_led
-    ├── u_spectrum_to_led : spectrum_to_led
-    └── u_ws2812_dri : ws2812_dri
+└── top_led.v
+    ├── spectrum_to_led.v
+    └── ws2812_dri.v
+
