@@ -64,7 +64,7 @@ Audio In (WM8731 / I²S)
 
 ## Notes / Disclaimer
 
-- 请不要上传到CSDN
+- > 请不要上传到CSDN
 
 - The **`spectrum_to_led`** module is **not provided** in this repository because WS2812B matrix wiring orders differ across setups.  
   Please implement your own mapping logic. For a two-dimensional matrix in **Verilog-2001**, consider flattening it into a 1-D bus (row- or column-major) and using `generate` blocks or index arithmetic to map `(row, col)` → `flat_index`.
