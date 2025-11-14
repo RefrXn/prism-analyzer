@@ -5,8 +5,16 @@
 # PrismAnalyzer
 FPGA implementation of a **32×8 WS2812B LED matrix spectrum visualizer**, written in **Verilog-2001**, using the **WM8731 audio codec** for input and a Xilinx FFT IP core for spectral analysis.
 
-> 如果你想知道spectrum_to_led.v的技术细节，欢迎联系我。如果你想要使用二维数组处理，很可能需要写SystemVerilog，但是有其他的解决办法。
+---
+
+> 如果你想知道 spectrum_to_led.v 的技术细节，欢迎联系我。如果你想要使用二维数组处理，很可能需要写SystemVerilog，但是有其他的解决办法。
 > 因为ws2812规格不一，所以此处不做赘述。
+
+>已知问题：
+>1. 由于FFT频谱泄露，导致的底噪较大。如需解决，建议加窗。
+>2. 目前没有自动增益调整，如果需要调整增益，可以在 top.v 的末端进行移位。
+>3. 目前（黑金AN831上自带的晶振源）主时钟12.288MHz，可能与其他wm8731板卡不同。
+>4. 使用3.3v的输出也可以驱动ws2812，不过建议把ws2812电源电压调小一些，本人使用4.7v左右。
 
 ---
 
