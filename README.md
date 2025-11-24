@@ -1,4 +1,3 @@
-[![License: CERN-OHL-W-2.0](https://img.shields.io/badge/License-CERN--OHL--W--2.0-blue.svg)](LICENSE)
 [![FPGA](https://img.shields.io/badge/FPGA-Verilog--2001-green.svg)]()
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
@@ -120,7 +119,6 @@ See the full text of the license for detailed terms and conditions.
 
 本项目为 **南京邮电大学「芯芯点灯」活动参赛作品**  
 
-**SPDX-License-Identifier:** CERN-OHL-S-2.0
 
 
 
